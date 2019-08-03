@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Onet",
+    "description": "ReactNative Boilerplate",
+    "slug": "",
+    "privacy": "unlisted",
+    "sdkVersion": "32.0.0",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "primaryColor": "#fff",
+    "icon": "./assets/app-icon.png",
+    "splash": {
+      "backgroundColor": "#fff",
+      "image": "./assets/splash-screen.png",
+      "resizeMode": "contain"
+    },
+    "packagerOpts": {
+      "assetExts": ["ttf", "mp4"]
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "githubUrl": "https://github.com/k3nt0w/onet"
+  }
+}

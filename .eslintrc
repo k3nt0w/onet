@@ -1,0 +1,67 @@
+{
+  "env": {
+    "browser": true,
+    "jest/globals": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "prettier/@typescript-eslint"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["jest", "react", "@typescript-eslint"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "no-console": 1,
+    "react/prop-types": 0,
+    "react/jsx-no-bind": 1
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/__tests__/**",
+        "**/__mocks__/**",
+        "**/*.test.ts",
+        "**/*.spec.ts",
+        "**/*.story.tsx",
+        "**/types.ts"
+      ],
+      "rules": {
+        "@typescript-eslint/no-explicit-any": 0,
+        "@typescript-eslint/explicit-function-return-type": 0,
+        "@typescript-eslint/no-object-literal-type-assertion": 0
+      }
+    },
+    {
+      "files": [
+        "**/*.tsx",
+        "**/operations.ts",
+        "**/actions.ts",
+        "**/main/index.ts",
+        "**/lib/**"
+      ],
+      "rules": {
+        "@typescript-eslint/explicit-function-return-type": 0
+      }
+    },
+    {
+      "files": ["src/bff/**/*.ts", "src/models/**/*.ts", "src/dto/**/*.ts"],
+      "rules": {
+        // public is obvious
+        "@typescript-eslint/explicit-member-accessibility": 0,
+        // use `interface` to only implement classes, otherwise use `type`
+        "@typescript-eslint/prefer-interface": 0,
+        // may bug
+        "@typescript-eslint/no-parameter-properties": 0
+      }
+    }
+  ]
+}

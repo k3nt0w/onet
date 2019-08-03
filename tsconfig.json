@@ -1,26 +1,10 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src",
-    "esModuleInterop": true,
-    "experimentalDecorators": true,
-    "forceConsistentCasingInFileNames": true,
-    "importHelpers": true,
+    "allowSyntheticDefaultImports": true,
     "jsx": "react-native",
-    "lib": ["es2017"],
-    "module": "esnext",
+    "lib": ["dom", "esnext"],
     "moduleResolution": "node",
-    "noEmitHelpers": true,
-    "noImplicitReturns": true,
-    "noUnusedLocals": true,
-    // Using the type definitions in @types/expo becuase they are still better than the ones provided by expo. See SvgScreen.tsx and SystemFontsScreen.tsx.
-    "paths": {
-      "expo": ["../node_modules/@types/expo", "../node_modules/expo"],
-      "react-native-pages": ["@types/react-native-pages"]
-    },
-    "skipLibCheck": true,
-    "sourceMap": false, // Something else (Babel?) is creating the necessary source maps.
-    "strict": true,
-    "target": "esnext"
-  },
-  "exclude": ["node_modules"]
+    "noEmit": true,
+    "skipLibCheck": true
+  }
 }
